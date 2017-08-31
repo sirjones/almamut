@@ -1,4 +1,10 @@
 client/.sass-cache/
+client/public/
+client/src/
+client/.gitignore
+client/netstat
+client/package.json
+client/README.md
 .sass-cache/
 cra-server-ex.graffle
 node_modules

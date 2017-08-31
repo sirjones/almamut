@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "test": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
     "client": "node start-client.js"
   },
