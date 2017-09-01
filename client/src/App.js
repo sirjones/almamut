@@ -61,6 +61,9 @@ class Nav extends React.Component {
       open: false
     }
   }
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  }
   navToggle () {
     this.state.open = !this.state.open
 
@@ -78,19 +81,26 @@ class Nav extends React.Component {
       document.getElementById('c-button--push-right').classList.remove('open')
     }
   }
-
+  
+  handleScroll () {
+    let scrollTopWork = document.getElementById("work").getBoundingClientRect()
+    let spans = document.getElementsByClassName('sp')
+    if(scrollTopWork.top <= 0)
+      console.log(spans)
+      spans.className += " bone"
+  }
     // this.addEventListener('mouseleave', function (e) {
     //   e.preventDefault()
     //   this.close()
     // }.bind(this))
   render () {
     return (
-      <div>
+      <div className="cont">
         <button id="c-button--push-right" type="button" aria-label="Push Right" className="nav-icon btn btn-default c-button"
         onClick={this.navToggle.bind(this)}>
-          <span />
-          <span />
-          <span />
+          <span className="sp"/>
+          <span className="sp"/>
+          <span className="sp"/>
         </button>
         <NavList items={items} clicked={this.navToggle.bind(this)}/>
       </div>

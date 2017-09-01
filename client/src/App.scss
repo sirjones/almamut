@@ -125,8 +125,8 @@ button:active {
     width: 40px;
     height: 4px;
     border-radius: 9px;
-    background: $bone;
     opacity: 1;
+    background: black;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -136,8 +136,12 @@ button:active {
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
 }
-
-
+.bone {
+    background: $bone;
+}
+.cont {
+    height: auto;
+}
 // Nav button span animation
 .nav-icon span:nth-child(1) {
     top: 0px;
@@ -621,8 +625,7 @@ a.btn.disabled {
 #c-button--push-right {
   position: fixed;
   z-index: 999;
-  top: 25px;
-  right: 20px;
+  height: 40px;
 }
 
 .c-menu__close {
