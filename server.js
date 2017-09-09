@@ -14,14 +14,22 @@ app.set('port', (process.env.PORT || 3001))
 
 // Express only serves static assets in production
 // if (process.env.NODE_ENV === 'production') {
-//      res.write("It's alive!");
 //      res.end();
-//      //app.use(express.static('/'))
 //   }
 app.use(express.static(path.join(__dirname, '/client/build')))
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '.', 'client/build', 'index.html'))
 })
+
+app.get('/sofia', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '.', 'client/build/sofia', 'index.html'))
+})
+
+app.get('/braian', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '.', 'client/build/braian', 'index.html'))
+})
+
 app.get('/contact', (req, res) => {
   const name = req.query.name
   const mail = req.query.mail
