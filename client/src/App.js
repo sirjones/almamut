@@ -178,19 +178,21 @@ class Team extends React.Component {
     return (
       <div id="team">
         <div className="about-us">
-          <h3>A small team<br/>with big ideas.</h3>
           <div className="teamMember">
-            <div className="polygon topMembers"></div>
-            <img src="img/portraitB.jpg" className="imgMembers" />
-            <img src="img/portraitS.jpg" className="imgMembers" />
+            {/* <div className="polygon topMembers"></div> */}
+            <h3>A small team<br/>with big ideas.</h3>
+            <div className="imgL">
+              <img src="img/portraitB.jpg" className="imgMembers" />
+              <p><b>Back-End Developer</b></p>
+              <p>Braian Oxagaray</p>
+            </div>
+            <div className="imgR">
+              <img src="img/portraitS.jpg" className="imgMembers" />
+              <p><b>Front-End Developer</b></p>
+              <p>Sofia Chardin</p>
+            </div>
             <div className="polygon bottomMembers"></div>
           </div>
-        </div>
-        <div className="small-team">
-          <p className="us text-center">
-            Since 2015 we design and develop responsive web apps focused in user experience and interface,
-            collaborating to achieve quality and stand up.
-          </p>
         </div>
         <Services/>
         <div className="polygon bottomTeam"></div>
@@ -287,12 +289,14 @@ class ProjectItem extends React.Component {
 
     return (
       <div className="p-item">
-        <div className="p-img-container">
-          <img className="p-img" src={imgURL} alt={'logo - ' + this.props.proj.name} />
-        </div>
-        <h4 className="p-title">{this.props.proj.name}</h4>
-        <hr />
-        <p className="p-summary">{this.props.proj.summary}</p>
+        <a className="p-link" href={this.props.proj.url} target="_blank">
+          <div className="p-img-container">
+            <img className="p-img" src={imgURL} alt={'logo - ' + this.props.proj.name} />
+          </div>
+          <h4 className="p-title">{this.props.proj.name}</h4>
+          <hr />
+          <p className="p-summary">{this.props.proj.summary}</p>
+        </a>
       </div>
     )
   }
@@ -327,6 +331,7 @@ class Contact extends React.Component {
         </div>
       </div>
       {submitted}
+      <SocialMedia />
     </div>
     )
   }

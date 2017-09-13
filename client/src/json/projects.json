@@ -3,7 +3,7 @@
         {   
             "id": 1,
             "name": "Teatro Mandril",
-            "url": "www.teatromandril.com",
+            "url": "http://www.teatromandril.com",
             "image": "img/mandril.svg",
             "summary": "Cultural club located in Boedo",
             "description": "Cultural club located in Boedo, Buenos Aires. The sites consists in 4 sections bla bla..."
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "name": "NPK Arte Vegetal",
-            "url": "www.npkartevegetal.com.ar",
+            "url": "http://www.npkartevegetal.com.ar",
             "image": "img/npk.svg",
             "summary": "Hydroponic vertical gardens",
             "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla..."
@@ -19,7 +19,7 @@
         {
             "id": 3,
             "name": "Nachissimo's Art",
-            "url": "www.nachissimosart.com",
+            "url": "http://www.nachissimosart.com",
             "image": "img/nssmo.svg",
             "summary": "Illustrator and Concept Artist's portfolio.",
             "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla..."
@@ -27,7 +27,7 @@
         {
             "id": 5,
             "name": "Gina Peiretti",
-            "url": "www.ginapeiretti.com",
+            "url": "http://www.ginapeiretti.com",
             "image": "img/gina.svg",
             "summary": "Artist portfolio",
             "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla..."
@@ -35,7 +35,7 @@
         {
             "id": 6,
             "name": "FADECS",
-            "url": "www.bibliofadecs.com",
+            "url": "http://www.bibliofadecs.com",
             "image": "img/fadecs.svg",
             "summary": "Virtual library",
             "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla..."
@@ -43,26 +43,10 @@
         {
             "id": 7,
             "name": "Irion AudioVisual",
-            "url": "www.irionaudiovisual.com",
+            "url": "http://www.irionaudiovisual.com",
             "image": "img/irion.svg",
             "summary": "Irion AudioVisual. Your project to the screen",
             "description": "Wordpress site. Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla.."
-        },
-        {
-            "id": 8,
-            "name": "Patagonia PNF",
-            "url": "www.patagoniapnf.com",
-            "image": "img/patagonia.png",
-            "summary": "Personal site",
-            "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla.."
-        },
-        {
-            "id": 9,
-            "name": "ABI S.R.L.",
-            "url": "www.abisrl.com",
-            "image": "img/abi.png",
-            "summary": "Civil construction company site",
-            "description": "Construction and mantainance of hydroponic vertical gardens. The sites consists in 4 sections bla bla.."
         }
     ]
 }
