@@ -1,4 +1,6 @@
-const express = require('express')
+const express = require('express'),
+    expressLogging = require('express-logging'),
+    logger = require('logops');
 const fs = require('fs')
 const sqlite = require('sql.js')
 const filebuffer = fs.readFileSync('db/usda-nnd.sqlite3')
@@ -12,21 +14,32 @@ const path = require('path')
 var mailOptions
 app.set('port', (process.env.PORT || 3001))
 
-// Express only serves static assets in production
-// if (process.env.NODE_ENV === 'production') {
-//      res.end();
-//   }
-app.use(express.static(path.join(__dirname, '/client/build')))
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '.', 'client/build', 'index.html'))
+app.use( express.static(path.join(__dirname, 'client/build')))
+app.use( express.static(path.join(__dirname, 'client/build/braian')))
+app.use( express.static(path.join(__dirname, 'client/build/sofia')))
+
+// app.get('/', (req, res) => {
+//   app.use(express.static(path.join(__dirname, 'client/build')))
+//   res.sendFile(path.resolve(__dirname, '.', 'client/build/', 'index.html'))
+//   res.end()
+// })
+
+app.get('/portfolio', (req, res) => {
+  const person = req.query.name
+  //const fileDirectory = path.resolve(__dirname, '.', 'client/build/' + person)
+  res.sendFile('index.html', {root: 'client/build/' +  person}, (err) => {
+    res.end();
+
+    if (err) {
+      throw(err)
+    } else {
+      console.log( person )
+    };
+  });
 })
 
-app.get('/sofia', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '.', 'client/build/sofia', 'index.html'))
-})
-
-app.get('/braian', (req, res) => {
+app.get('/portfolio', (req, res) => {
   res.sendFile(path.resolve(__dirname, '.', 'client/build/braian', 'index.html'))
 })
 

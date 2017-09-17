@@ -86,7 +86,6 @@ class Nav extends React.Component {
     let scrollTopWork = document.getElementById("work").getBoundingClientRect()
     let spans = document.getElementsByClassName('sp')
     if(scrollTopWork.top <= 0)
-      console.log(spans)
       spans.className += " bone"
   }
     // this.addEventListener('mouseleave', function (e) {
@@ -136,9 +135,6 @@ window.Nav.NavList = NavList
 
 // li
 class NavItem extends React.Component {
-  // handleClick() {
-  //   console.log('wabadaba')
-  // }
   render () {
     const {
       itemName,
@@ -174,6 +170,12 @@ class Home extends React.Component {
 }
 
 class Team extends React.Component {
+
+  handlePortfolios ( who ) {
+      fetch(`portfolio?name=${who}`)
+      //onClick={this.handlePortfolios.bind(this, 'braian')}
+  }
+
   render () {
     return (
       <div id="team">
@@ -182,14 +184,18 @@ class Team extends React.Component {
             {/* <div className="polygon topMembers"></div> */}
             <h3>A small team<br/>with big ideas.</h3>
             <div className="imgL">
-              <img src="img/portraitB.jpg" className="imgMembers" />
-              <p><b>Back-End Developer</b></p>
-              <p>Braian Oxagaray</p>
+              <a href='/braian'>
+                <img src="img/portraitB.jpg" className="imgMembers" />
+                <p><b>Back-End Developer</b></p>
+                <p>Braian Oxagaray</p>
+              </a>
             </div>
             <div className="imgR">
-              <img src="img/portraitS.jpg" className="imgMembers" />
-              <p><b>Front-End Developer</b></p>
-              <p>Sofia Chardin</p>
+              <a href='/sofia'>
+                <img src="img/portraitS.jpg" className="imgMembers" />
+                <p><b>Front-End Developer</b></p>
+                <p>Sofia Chardin</p>
+              </a>
             </div>
             <div className="polygon bottomMembers"></div>
           </div>
